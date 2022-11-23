@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update repo from template",
+            "type": "shell",
+            "command": "${workspaceFolder}\"\\scripts\\update-template.ps1\"",
+            "options": {
+                "cwd": "${workspaceFolder}\\scripts"
+            },
+            "presentation": {
+                "focus": true,
+                "panel": "new"
+            }
+        }
+    ]
+}
