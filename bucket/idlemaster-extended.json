@@ -4,6 +4,7 @@
     "homepage": "https://github.com/JonasNilson/idle_master_extended",
     "license": "",
     "url": "https://github.com/JonasNilson/idle_master_extended/releases/download/v1.9.0/idle_master_extended_v1.9.0.zip",
+    "extract_dir": "idle_master_extended_v1.9.0",
     "hash": "sha256:89F432A6085696F9C5827A99AF24848D5F81131E17C57FF94C16B73509EF4A41",
     "shortcuts": [
         [
