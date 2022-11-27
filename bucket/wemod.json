@@ -1,0 +1,34 @@
+{
+    "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/wemod.json",
+    "version": "8.3.12",
+    "description": "Thousands of free mods and trainers for your favorite single-player PC games - all in one place.",
+    "homepage": "https://www.wemod.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.wemod.com/terms"
+    },
+    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.3.12.exe#/dl.7z",
+    "hash": "sha256:5BB1C20F4C1B10EFC7EB27FAB28FF019C39C298F4BD0D292ED2CDE403F15203A",
+    "shortcuts": [
+        [
+            "WeMod.exe",
+            "WeMod"
+        ]
+    ],
+    "pre_install": [
+        "$nupkg=(Get-ChildItem $dir\\*full.nupkg).Name",
+        "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction 'SilentlyContinue' -Force -Recurse",
+        "Expand-7zipArchive \"$dir\\$nupkg\" -ExtractDir 'lib\\net45' -Removal"
+    ],
+    "post_uninstall": [
+        "Remove-Item ${env:APPDATA}\\wemod\\* -Force -Recurse"
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/header.json",
+        "jsonpath": "$[?(@.name == 'wemod-stable')].redirect",
+        "regex": "WeMod-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-$version.exe#/dl.7z"
+    }
+}
