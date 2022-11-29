@@ -11,6 +11,7 @@
             "Far Cry 2 Multi Fixer"
         ]
     ],
+    "persist": "FarCry2MFLauncher.ini",
     "pre_install": "If (!(Test-Path \"$persist_dir\\FarCry2MFLauncher.ini\")) { New-Item \"$dir\\FarCry2MFLauncher.ini\" -ItemType File | Out-Null }",
     "checkver": {
         "url": "https://api.github.com/repos/FoxAhead/Far-Cry-2-Multi-Fixer/releases",
