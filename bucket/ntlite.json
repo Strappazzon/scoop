@@ -1,0 +1,38 @@
+{
+    "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/NTLite-Portable.json",
+    "depends": "innounp",
+    "version": "2.3.9.9002",
+    "description": "Local control for updating and editing Windows images and deployments.",
+    "homepage": "https://www.ntlite.com",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://www.ntlite.com/shop/"
+    },
+    "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe",
+    "hash": "sha256:7C0DC3834E7CEE7973DD3B73AA2E4DE6E82FED355FF9C10446C225674D89498C",
+    "installer": {
+        "script": [
+            "Expand-InnoArchive -Path \"$dir\\$fname\"",
+            "Expand-InnoArchive -Path \"$dir\\$fname\" -ExtractDir '{code_CefInstallDir}' -Removal"
+        ]
+    },
+    "shortcuts": [
+        [
+            "NTLite.exe",
+            "NTLite"
+        ]
+    ],
+    "persist": [
+        "Presets",
+        "Updates",
+        "settings.xml"
+    ],
+    "pre_install": "If (!(Test-Path \"$persist_dir\\settings.xml\")) { New-Item \"$dir\\settings.xml\" -ItemType File | Out-Null }",
+    "checkver": {
+        "regex": "<span.+>v([\\d.]+)<\\/span>",
+        "url": "https://www.ntlite.com/download/"
+    },
+    "autoupdate": {
+        "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe"
+    }
+}
