@@ -17,6 +17,11 @@
             "Remove-Item \"$dir\\ProcessLasso\" -Force -Recurse"
         ]
     },
+    "post_install": [
+        "$config = \"${env:LOCALAPPDATA}\\ProcessLasso\\config\\prolasso.ini\"",
+        "If (!(Test-Path $config)) { New-Item $config -ItemType File -Force | Out-Null }",
+        "\"[Advanced]`nAutomaticUpdate=false\" | Out-File -File \"$config\" -Encoding utf8"
+    ],
     "shortcuts": [
         [
             "ProcessLassoLauncher.exe",
