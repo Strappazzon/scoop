@@ -1,0 +1,41 @@
+{
+    "##": "Based on https://github.com/jonisb/Misc-scoops/blob/master/bucket/ProcessLasso.json",
+    "version": "12.0.1",
+    "description": "Real-Time CPU Optimization and Automation.",
+    "homepage": "https://bitsum.com/processlasso/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://bitsum.com/howfree/"
+    },
+    "url": "https://dl.bitsum.com/files/processlassosetup64.exe#/dl.7z",
+    "hash": "sha256:D8EDF43F7D2793D6F0513A741B78B5B57DF4F03EE9C56F624D3FA6BD1040E461",
+    "extract_to": "ProcessLasso",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\ProcessLasso\\`$PLUGINSDIR\" -Force -Recurse",
+            "Move-Item \"$dir\\ProcessLasso\\*\" -Destination \"$dir\"",
+            "Remove-Item \"$dir\\ProcessLasso\" -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "ProcessLassoLauncher.exe",
+            "Process Lasso"
+        ]
+    ],
+    "persist": [
+        "config",
+        "logs"
+    ],
+    "post_uninstall": [
+        "Remove-Item \"${env:LOCALAPPDATA}\\ProcessLasso\\config\\prolasso.ini\"",
+        "Remove-Item \"${env:LOCALAPPDATA}\\ProcessLasso\\logs\" -Force -Recurse"
+    ],
+    "checkver": {
+        "url": "https://bitsum.com/changes/processlasso/",
+        "regex": "Process Lasso v.*>([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://dl.bitsum.com/files/processlassosetup64.exe#/dl.7z"
+    }
+}
