@@ -1,7 +1,7 @@
 {
     "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/NTLite-Portable.json",
     "depends": "innounp",
-    "version": "2.3.9.9016",
+    "version": "2.3.9.9017",
     "description": "Local control for updating and editing Windows images and deployments.",
     "homepage": "https://www.ntlite.com",
     "license": {
@@ -9,7 +9,7 @@
         "url": "https://www.ntlite.com/shop/"
     },
     "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe",
-    "hash": "04ddd5271a0460e11de9ed8609511e52dad79cdf2717bb8e0d3227d9f59851d5",
+    "hash": "943739ad5efa036d4882daf4ccb73183daac98deecf7bbcbf28ac87a2f08f4f5",
     "installer": {
         "script": [
             "Expand-InnoArchive -Path \"$dir\\$fname\"",
