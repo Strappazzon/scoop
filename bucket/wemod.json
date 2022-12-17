@@ -20,7 +20,7 @@
         "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction SilentlyContinue -Force -Recurse",
         "Expand-7zipArchive \"$dir\\$nupkg\" -ExtractDir 'lib\\net45' -Removal"
     ],
-    "post_uninstall": "Remove-Item ${env:APPDATA}\\wemod\\* -Force -Recurse",
+    "post_uninstall": "If ($cmd -eq 'uninstall') { Remove-Item ${env:APPDATA}\\wemod\\* -Force -Recurse }",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/header.json",
         "jsonpath": "$[?(@.name == 'wemod-stable')].redirect",

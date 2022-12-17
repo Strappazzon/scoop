@@ -15,7 +15,7 @@
             "Idle Master Extended"
         ]
     ],
-    "post_uninstall": "Remove-Item ${env:LOCALAPPDATA}\\IdleMasterExtended\\* -Force -Recurse",
+    "post_uninstall": "If ($cmd -eq 'uninstall') { Remove-Item ${env:LOCALAPPDATA}\\IdleMasterExtended\\* -Force -Recurse }",
     "checkver": {
         "github": "https://github.com/JonasNilson/idle_master_extended"
     },

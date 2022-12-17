@@ -33,8 +33,10 @@
         "logs"
     ],
     "post_uninstall": [
-        "Remove-Item \"${env:LOCALAPPDATA}\\ProcessLasso\\config\\prolasso.ini\"",
-        "Remove-Item \"${env:LOCALAPPDATA}\\ProcessLasso\\logs\\*\" -Force -Recurse"
+        "If ($cmd -eq 'uninstall') {",
+        "  Remove-Item \"${env:LOCALAPPDATA}\\ProcessLasso\\config\\prolasso.ini\"",
+        "  Remove-Item \"${env:LOCALAPPDATA}\\ProcessLasso\\logs\\*\" -Force -Recurse",
+        "}"
     ],
     "checkver": {
         "url": "https://bitsum.com/changes/processlasso/",

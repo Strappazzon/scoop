@@ -14,7 +14,7 @@
             "GHOST Buster"
         ]
     ],
-    "post_uninstall": "Remove-Item ${env:LOCALAPPDATA}\\GHOSTbackup\\ghostbackup.cfg",
+    "post_uninstall": "If ($cmd -eq 'uninstall') { Remove-Item ${env:LOCALAPPDATA}\\GHOSTbackup\\ghostbackup.cfg }",
     "checkver": {
         "github": "https://github.com/Strappazzon/GRW-GHOST-Buster"
     },
