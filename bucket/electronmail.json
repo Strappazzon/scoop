@@ -1,0 +1,38 @@
+{
+    "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/electronmail.json",
+    "version": "5.1.2",
+    "description": "Unofficial ProtonMail Desktop App",
+    "homepage": "https://github.com/vladimiry/ElectronMail",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/vladimiry/ElectronMail/blob/master/LICENSE"
+    },
+    "url": "https://github.com/vladimiry/ElectronMail/releases/download/v5.1.2/electron-mail-5.1.2-windows-x64-nsis-installer.exe#/dl.7z",
+    "hash": "sha256:26263A166BF9435F716383C20174E1F3484F6D92E14D211E89B4BDED518B4E35",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "ElectronMail.exe",
+            "ElectronMail",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "env_set": {
+        "ELECTRON_MAIL_USER_DATA_DIR": "$dir\\User Data"
+    },
+    "persist": "User Data",
+    "notes": "Desktop notifications don't work.",
+    "checkver": {
+        "github": "https://github.com/vladimiry/ElectronMail"
+    },
+    "autoupdate": {
+        "url": "https://github.com/vladimiry/ElectronMail/releases/download/v$version/electron-mail-$version-windows-x64-nsis-installer.exe#/dl.7z",
+        "hash": {
+            "url": "https://github.com/vladimiry/ElectronMail/releases/tag/v$version",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}
