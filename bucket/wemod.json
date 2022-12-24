@@ -21,11 +21,6 @@
         "Expand-7zipArchive \"$dir\\$nupkg\" -ExtractDir 'lib\\net45' -Removal"
     ],
     "post_uninstall": "If ($cmd -eq 'uninstall') { Remove-Item ${env:APPDATA}\\wemod\\* -Force -Recurse }",
-    "checkver": {
-        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/header.json",
-        "jsonpath": "$[?(@.name == 'wemod-stable')].redirect",
-        "regex": "WeMod-([\\d.]+)\\.exe"
-    },
     "autoupdate": {
         "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-$version.exe#/dl.7z"
     }
