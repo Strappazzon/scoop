@@ -18,6 +18,7 @@
     "persist": [
         "logs",
         "ModifiedFilesFC6",
+        "ModifiedFilesFC6_Libertad",
         "SettingsFC6.xml"
     ],
     "checkver": {
