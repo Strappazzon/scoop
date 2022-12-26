@@ -7,7 +7,8 @@
     "hash": "sha256:3AF9E79E6230CD549E14EBEEF7F8EC3F803676D36FF05E65442C341CC4FACA6E",
     "extract_dir": "ModInstallerFC6",
     "pre_install": [
-        "If (!(Test-Path \"$persist_dir\\SettingsFC6.xml\")) { New-Item \"$dir\\SettingsFC6.xml\" -ItemType File | Out-Null }"
+        "If (!(Test-Path \"$persist_dir\\SettingsFC6.xml\")) { New-Item \"$dir\\SettingsFC6.xml\" -ItemType File | Out-Null }",
+        "If (!(Test-Path \"$persist_dir\\ModInstallerSavesFC6.bin\")) { New-Item \"$dir\\ModInstallerSavesFC6.bin\" -ItemType File | Out-Null }"
     ],
     "shortcuts": [
         [
@@ -19,6 +20,7 @@
         "logs",
         "ModifiedFilesFC6",
         "ModifiedFilesFC6_Libertad",
+        "ModInstallerSavesFC6.bin",
         "SettingsFC6.xml"
     ],
     "checkver": {
