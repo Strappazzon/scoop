@@ -1,0 +1,30 @@
+{
+    "version": "20221223-1100",
+    "description": "Mod Installer (MI) is a program for easy installing mods to Far Cry 6.",
+    "homepage": "https://downloads.fcmodding.com/fc6/mod-installer/",
+    "license": "Unknown",
+    "url": "https://downloads.fcmodding.com/files/ModInstallerFC6.zip",
+    "hash": "sha256:3AF9E79E6230CD549E14EBEEF7F8EC3F803676D36FF05E65442C341CC4FACA6E",
+    "extract_dir": "ModInstallerFC6",
+    "pre_install": [
+        "If (!(Test-Path \"$persist_dir\\SettingsFC6.xml\")) { New-Item \"$dir\\SettingsFC6.xml\" -ItemType File | Out-Null }"
+    ],
+    "shortcuts": [
+        [
+            "FC6ModInstaller.exe",
+            "Far Cry 6 Mod Installer"
+        ]
+    ],
+    "persist": [
+        "logs",
+        "ModifiedFilesFC6",
+        "SettingsFC6.xml"
+    ],
+    "checkver": {
+        "url": "https://downloads.fcmodding.com/fc6/mod-installer/",
+        "regex": "<p class=\"text-center\"><i>v([\\d\\-]+)</i></p>"
+    },
+    "autoupdate": {
+        "url": "https://downloads.fcmodding.com/files/ModInstallerFC6.zip"
+    }
+}
