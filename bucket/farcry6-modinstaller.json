@@ -1,10 +1,10 @@
 {
-    "version": "20221223-1100",
+    "version": "20230111-0100",
     "description": "Mod Installer (MI) is a program for easy installing mods to Far Cry 6.",
     "homepage": "https://downloads.fcmodding.com/fc6/mod-installer/",
     "license": "Unknown",
     "url": "https://downloads.fcmodding.com/files/ModInstallerFC6.zip",
-    "hash": "sha256:3AF9E79E6230CD549E14EBEEF7F8EC3F803676D36FF05E65442C341CC4FACA6E",
+    "hash": "ad93b7d7484ff9192dde3e0f1d775d0deb29d6a9a79ae1fd20b990d72fd1d422",
     "extract_dir": "ModInstallerFC6",
     "pre_install": [
         "If (!(Test-Path \"$persist_dir\\SettingsFC6.xml\")) { New-Item \"$dir\\SettingsFC6.xml\" -ItemType File | Out-Null }",
