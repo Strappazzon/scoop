@@ -10,8 +10,10 @@
     "extract_dir": "idle_master_extended_v1.9.0",
     "hash": "sha256:89F432A6085696F9C5827A99AF24848D5F81131E17C57FF94C16B73509EF4A41",
     "bin": [
-        "steam-idle.exe",
-        "steam-idle"
+        [
+            "steam-idle.exe",
+            "steam-idle"
+        ]
     ],
     "shortcuts": [
         [
