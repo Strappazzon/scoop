@@ -1,14 +1,14 @@
 {
     "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/wemod.json",
-    "version": "8.3.15",
+    "version": "8.3.16",
     "description": "Thousands of free mods and trainers for your favorite single-player PC games - all in one place.",
     "homepage": "https://www.wemod.com",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.wemod.com/terms"
     },
-    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.3.15.exe#/dl.7z",
-    "hash": "sha256:876A4403FCE74F11BD6E15D3A87A3A5866571AE0D1D6BCAF680BF27B1C0B086E",
+    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.3.16.exe#/dl.7z",
+    "hash": "sha256:1890E8FD6A10C114586EB0984A997ED4AFF4A3072FED4E73D63B0D2C80F6C207",
     "shortcuts": [
         [
             "WeMod.exe",
