@@ -1,0 +1,26 @@
+{
+    "version": "1.3.1",
+    "description": "Frosty plugin to fix modding games on platforms other than Origin",
+    "homepage": "https://github.com/Dyvinia/DatapathFixPlugin",
+    "license": "Unknown",
+    "url": "https://github.com/Dyvinia/DatapathFixPlugin/releases/download/v1.3.1/DatapathFixPlugin.zip",
+    "hash": "sha256:26FA0F4105466E4322CDCFB7089E7011CEB2F5FB059A5A938E76009D1C52D640",
+    "pre_install": [
+        "$frosty_folder = Split-Path \"${env:USERPROFILE}\\scoop\\apps\\frosty-modmanager\\current\\FrostyModManager.exe\"",
+        "If (!(Test-Path $frosty_folder)) { error 'Could not find Frosty Mod Manager. Aborting installation.'; break }",
+        "Copy-Item \"$dir\\DatapathFix.exe\" \"$frosty_folder\\Plugins\\\" -Force",
+        "Copy-Item \"$dir\\DatapathFixPlugin.dll\" \"$frosty_folder\\Plugins\\\" -Force"
+    ],
+    "post_uninstall": [
+        "$frosty_folder = Split-Path \"${env:USERPROFILE}\\scoop\\apps\\frosty-modmanager\\current\\FrostyModManager.exe\"",
+        "If (!(Test-Path $frosty_folder)) { error 'Could not find Frosty Mod Manager.'; break }",
+        "Remove-Item \"$frosty_folder\\Plugins\\DatapathFix.exe\" -ErrorAction SilentlyContinue -Force",
+        "Remove-Item \"$frosty_folder\\Plugins\\DatapathFixPlugin.dll\" -ErrorAction SilentlyContinue -Force"
+    ],
+    "checkver": {
+        "github": "https://github.com/Dyvinia/DatapathFixPlugin"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Dyvinia/DatapathFixPlugin/releases/download/v$version/DatapathFixPlugin.zip"
+    }
+}
