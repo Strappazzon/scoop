@@ -1,12 +1,17 @@
-// Configure PSScriptAnalyzer settings
 {
 	"[powershell]": {
 		"editor.formatOnSave": true
 	},
-	"powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
-	"powershell.codeFormatting.preset": "OTBS",
-	"powershell.codeFormatting.alignPropertyValuePairs": true,
-	"powershell.codeFormatting.ignoreOneLineBlock": true,
+
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.fixAll.sortJSON": true
+	},
+
+	"files.exclude": {
+		"**/.git": true
+	},
+
 	"json.schemas": [
 		{
 			"url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
@@ -15,13 +20,40 @@
 			]
 		}
 	],
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/tmp": true
-	},
+
+	"powershell.codeFormatting.alignPropertyValuePairs": true,
+	"powershell.codeFormatting.ignoreOneLineBlock": true,
+	"powershell.codeFormatting.preset": "OTBS",
+	"powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
+
+	"sortJSON.orderOverride": [
+		"##",
+		"depends",
+		"suggest",
+		"version",
+		"description",
+		"homepage",
+		"license",
+		"identifier",
+		"url",
+		"hash",
+		"architecture",
+		"extract_dir",
+		"extract_to",
+		"pre_install",
+		"installer",
+		"post_install",
+		"env_add_path",
+		"env_set",
+		"bin",
+		"shortcuts",
+		"persist",
+		"uninstaller",
+		"post_uninstall",
+		"checkver",
+		"autoupdate",
+		"notes"
+	],
+
 	"terminal.integrated.defaultProfile.windows": "PowerShell"
 }

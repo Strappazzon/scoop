@@ -10,6 +10,7 @@
     },
     "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe",
     "hash": "fda8f6181caa85fa3badb0f90f99f5207a11a2f63a02593b470b4ce5e50e1cc1",
+    "pre_install": "If (!(Test-Path \"$persist_dir\\settings.xml\")) { New-Item \"$dir\\settings.xml\" -ItemType File | Out-Null }",
     "installer": {
         "script": [
             "Expand-InnoArchive -Path \"$dir\\$fname\"",
@@ -27,10 +28,9 @@
         "Updates",
         "settings.xml"
     ],
-    "pre_install": "If (!(Test-Path \"$persist_dir\\settings.xml\")) { New-Item \"$dir\\settings.xml\" -ItemType File | Out-Null }",
     "checkver": {
-        "regex": "<span.+>v([\\d.]+)<\\/span>",
-        "url": "https://www.ntlite.com/download/"
+        "url": "https://www.ntlite.com/download/",
+        "regex": "<span.+>v([\\d.]+)<\\/span>"
     },
     "autoupdate": {
         "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe"

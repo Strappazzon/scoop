@@ -13,6 +13,9 @@
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse"
     ],
+    "env_set": {
+        "ELECTRON_MAIL_USER_DATA_DIR": "$dir\\User Data"
+    },
     "shortcuts": [
         [
             "ElectronMail.exe",
@@ -20,11 +23,7 @@
             "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
-    "env_set": {
-        "ELECTRON_MAIL_USER_DATA_DIR": "$dir\\User Data"
-    },
     "persist": "User Data",
-    "notes": "Desktop notifications don't work.",
     "checkver": {
         "github": "https://github.com/vladimiry/ElectronMail"
     },
@@ -34,5 +33,6 @@
             "url": "https://github.com/vladimiry/ElectronMail/releases/tag/v$version",
             "regex": "$sha256\\s+$basename"
         }
-    }
+    },
+    "notes": "Desktop notifications don't work."
 }
