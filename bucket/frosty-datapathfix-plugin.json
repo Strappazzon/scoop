@@ -8,12 +8,12 @@
     "hash": "e46d0343924ae71b82ba9a75eaad8f47003a5dc2eb8972df18df6ca2d34d49e7",
     "pre_install": [
         "$frosty_folder = Split-Path \"${env:USERPROFILE}\\scoop\\apps\\frosty-modmanager\\current\\FrostyModManager.exe\"",
-        "Copy-Item \"$dir\\DatapathFix.exe\" \"$frosty_folder\\Plugins\\\" -Force",
+        "Copy-Item \"$dir\\DatapathFix\" \"$frosty_folder\\Plugins\\DatapathFix\" -Force -Recurse",
         "Copy-Item \"$dir\\DatapathFixPlugin.dll\" \"$frosty_folder\\Plugins\\\" -Force"
     ],
     "post_uninstall": [
         "$frosty_folder = Split-Path \"${env:USERPROFILE}\\scoop\\apps\\frosty-modmanager\\current\\FrostyModManager.exe\"",
-        "Remove-Item \"$frosty_folder\\Plugins\\DatapathFix.exe\" -ErrorAction SilentlyContinue -Force",
+        "Remove-Item -LiteralPath \"$frosty_folder\\Plugins\\DatapathFix\" -ErrorAction SilentlyContinue -Force -Recurse",
         "Remove-Item \"$frosty_folder\\Plugins\\DatapathFixPlugin.dll\" -ErrorAction SilentlyContinue -Force"
     ],
     "checkver": {
