@@ -1,17 +1,19 @@
-# Strappazzon's Scoop Bucket
+<div align="center">
 
-<a href="https://github.com/Strappazzon/scoop/actions/workflows/ci.yml">
-  <img align="right" src="https://github.com/Strappazzon/scoop/actions/workflows/ci.yml/badge.svg" alt="Tests" title="Tests">
-</a>
+# :bucket: Strappazzon's Scoop Bucket
 
-<a href="https://github.com/Strappazzon/scoop/actions/workflows/excavator.yml">
-  <img align="right" src="https://github.com/Strappazzon/scoop/actions/workflows/excavator.yml/badge.svg" alt="Excavator" title="Excavator">
-</a>
+This is my personal [scoop](https://github.com/ScoopInstaller/Scoop#readme) bucket.
 
-This is my personal [scoop](https://scoop.sh) bucket.
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Strappazzon/scoop/ci.yml?label=Tests&logo=github&style=flat-square)](https://github.com/Strappazzon/scoop/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/Strappazzon/scoop?color=%230369ee&label=License&logo=unlicense&logoColor=%23ffffff&style=flat-square)](https://github.com/Strappazzon/scoop/blob/-/LICENSE.txt)
+[![GitHub repo file count (custom path)](https://img.shields.io/github/directory-file-count/Strappazzon/scoop/bucket?color=%230369ee&label=Manifests&style=flat-square)](https://github.com/Strappazzon/scoop/tree/master/bucket)
+[![GitHub repo size](https://img.shields.io/github/repo-size/Strappazzon/scoop?color=%230369ee&label=Repo%20size&style=flat-square)](https://github.com/Strappazzon/scoop)
 
-## How to add this bucket
+</div>
 
-```ps1
+## Usage
+
+```
 scoop bucket add strappazzon https://github.com/Strappazzon/scoop
+scoop install <manifest>
 ```
