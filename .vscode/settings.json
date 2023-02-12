@@ -1,59 +1,59 @@
 {
-	"[powershell]": {
-		"editor.formatOnSave": true
-	},
+    "[powershell]": {
+        "editor.formatOnSave": true
+    },
 
-	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.fixAll.sortJSON": true
-	},
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.sortJSON": true
+    },
 
-	"files.exclude": {
-		"**/.git": true
-	},
+    "files.exclude": {
+        "**/.git": true
+    },
 
-	"json.schemas": [
-		{
-			"url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-			"fileMatch": [
-				"bucket/*.json"
-			]
-		}
-	],
+    "json.schemas": [
+        {
+            "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+            "fileMatch": [
+                "bucket/*.json"
+            ]
+        }
+    ],
 
-	"powershell.codeFormatting.alignPropertyValuePairs": true,
-	"powershell.codeFormatting.ignoreOneLineBlock": true,
-	"powershell.codeFormatting.preset": "OTBS",
-	"powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
+    "powershell.codeFormatting.alignPropertyValuePairs": true,
+    "powershell.codeFormatting.ignoreOneLineBlock": true,
+    "powershell.codeFormatting.preset": "OTBS",
+    "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
 
-	"sortJSON.orderOverride": [
-		"##",
-		"depends",
-		"suggest",
-		"version",
-		"description",
-		"homepage",
-		"license",
-		"identifier",
-		"url",
-		"hash",
-		"architecture",
-		"extract_dir",
-		"extract_to",
-		"pre_install",
-		"installer",
-		"post_install",
-		"env_add_path",
-		"env_set",
-		"bin",
-		"shortcuts",
-		"persist",
-		"uninstaller",
-		"post_uninstall",
-		"checkver",
-		"autoupdate",
-		"notes"
-	],
+    "sortJSON.orderOverride": [
+        "##",
+        "depends",
+        "suggest",
+        "version",
+        "description",
+        "homepage",
+        "license",
+        "identifier",
+        "url",
+        "hash",
+        "architecture",
+        "extract_dir",
+        "extract_to",
+        "pre_install",
+        "installer",
+        "post_install",
+        "env_add_path",
+        "env_set",
+        "bin",
+        "shortcuts",
+        "persist",
+        "uninstaller",
+        "post_uninstall",
+        "checkver",
+        "autoupdate",
+        "notes"
+    ],
 
-	"terminal.integrated.defaultProfile.windows": "PowerShell"
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
 }
