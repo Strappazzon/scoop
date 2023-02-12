@@ -2,16 +2,36 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Check version (Whole repository)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\bin\\checkver.ps1",
+            "args": [
+                "-SkipUpdated"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "group": "test",
+            "problemMatcher": [ ]
+        },
+        {
             "label": "Update repo from template",
             "type": "shell",
-            "command": "${workspaceFolder}\"\\scripts\\update-template.ps1\"",
+            "command": "${workspaceFolder}\\Scoop-Bucket.Update-Template.ps1",
             "options": {
-                "cwd": "${workspaceFolder}\\scripts"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
-                "focus": true,
-                "panel": "new"
-            }
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            },
+            "group": "none",
+            "problemMatcher": [ ]
         }
     ]
 }
