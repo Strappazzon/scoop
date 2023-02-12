@@ -1,5 +1,9 @@
+name: Update bucket
+
 on:
   schedule:
+    # Run every 2 hours
+    # https://crontab.guru/#0_*/2_*_*_*
     - cron: "0 */2 * * *"
   workflow_dispatch:
     inputs:
@@ -8,7 +12,6 @@ on:
         required: false
         default: ""
 
-name: Update bucket
 jobs:
   update:
     name: Update manifests
@@ -16,11 +19,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
       - name: Run autoupdate
         uses: foosel/scoop-checkver-action@v1
         with:
           bucket: bucket
           force: ${{ github.event.inputs.force }}
+
       - name: Deploy changes
         run: |
           git config --global user.name 'github-actions[bot]'

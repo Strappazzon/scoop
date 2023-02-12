@@ -1,9 +1,12 @@
+name: Excavator
+
 on:
   workflow_dispatch:
   schedule:
-    # run every 4 hours
-    - cron: '20 */4 * * *'
-name: Excavator
+    # Run every 4 hours
+    # https://crontab.guru/#20_*/4_*_*_*
+    - cron: "20 */4 * * *"
+
 jobs:
   excavate:
     name: Excavate

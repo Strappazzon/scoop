@@ -1,7 +1,10 @@
+name: Commented Pull Request
+
 on:
   issue_comment:
-    types: [created]
-name: Commented Pull Request
+    types:
+      - created
+
 jobs:
   pullRequestHandler:
     name: PullRequestHandler
