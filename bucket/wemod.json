@@ -7,8 +7,8 @@
         "identifier": "Proprietary",
         "url": "https://www.wemod.com/terms"
     },
-    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.4.1.exe#/dl.7z",
-    "hash": "sha256:A945DE54F83AEA98A6D73E163B50B501195989C487305E34927149F6F9C4B8ED",
+    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.5.0.exe#/dl.7z",
+    "hash": "sha256:AF93691DCDACAD747705B4FD30685B2A3C87EDAF30B95DB44151905678E3C934",
     "pre_install": [
         "$nupkg=(Get-ChildItem $dir\\*full.nupkg).Name",
         "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction SilentlyContinue -Force -Recurse",
