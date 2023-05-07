@@ -1,5 +1,4 @@
 {
-    "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/wemod.json",
     "version": "8.4.1",
     "description": "Thousands of free mods and trainers for your favorite single-player PC games - all in one place.",
     "homepage": "https://www.wemod.com",
@@ -7,8 +6,8 @@
         "identifier": "Proprietary",
         "url": "https://www.wemod.com/terms"
     },
-    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.5.0.exe#/dl.7z",
-    "hash": "sha256:AF93691DCDACAD747705B4FD30685B2A3C87EDAF30B95DB44151905678E3C934",
+    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-8.6.0.exe#/dl.7z",
+    "hash": "sha256:689C4761B9897B14DBADF5DD833C603A2DEECDECCFB1F7C5A6304B2AFBE7CFEE",
     "pre_install": [
         "$nupkg=(Get-ChildItem $dir\\*full.nupkg).Name",
         "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction SilentlyContinue -Force -Recurse",
