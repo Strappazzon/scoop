@@ -21,6 +21,11 @@
         }
     ],
 
+    "markdownlint.config": {
+        "MD033": false,
+        "MD041": false
+    },
+
     "powershell.codeFormatting.alignPropertyValuePairs": true,
     "powershell.codeFormatting.ignoreOneLineBlock": true,
     "powershell.codeFormatting.preset": "OTBS",
