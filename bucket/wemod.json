@@ -20,6 +20,10 @@
         ]
     ],
     "post_uninstall": "If ($cmd -eq 'uninstall') { Remove-Item ${env:APPDATA}\\wemod\\* -Force -Recurse }",
+    "checkver": {
+        "url": "https://api.wemod.com/client/channels/stable/RELEASES",
+        "regex": "(.*(WeMod-(?<version>[\\d\\.]+)).*)"
+    },
     "autoupdate": {
         "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-$version.exe#/dl.7z"
     }
