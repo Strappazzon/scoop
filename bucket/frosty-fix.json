@@ -1,11 +1,11 @@
 {
     "##": "Based on https://github.com/kazzarin/bucket/blob/master/bucket/frostyfix.json",
-    "version": "5.2.0",
+    "version": "5.2.1",
     "description": "A tool to fix Frosty support with games on platforms other than Origin",
     "homepage": "https://github.com/Dyvinia/FrostyFix",
     "license": "Unknown",
-    "url": "https://github.com/Dyvinia/FrostyFix/releases/download/v5.2.0/FrostyFix.exe",
-    "hash": "ee8ef776b643e9640c7e07487ce4f4236a5ef21b4b8be0b90e8e12f517eee83f",
+    "url": "https://github.com/Dyvinia/FrostyFix/releases/download/v5.2.1/FrostyFix.exe",
+    "hash": "92703b420c3ef06b9624314d867025ee0ba62c11aecf90098c1d116dc347533f",
     "shortcuts": [
         [
             "FrostyFix.exe",
