@@ -1,10 +1,8 @@
-name: Update bucket
+name: Updates
 
 on:
   schedule:
-    # Run every 2 hours
-    # https://crontab.guru/#0_*/2_*_*_*
-    - cron: "0 */2 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -13,19 +11,28 @@ on:
         default: ""
 
 jobs:
+  excavate:
+    name: Excavator
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: 1
   update:
-    name: Update manifests
+    name: Autoupdate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
-      - name: Run autoupdate
-        uses: foosel/scoop-checkver-action@v1
+      - name: Update manifests
+        uses: foosel/scoop-checkver-action@main
         with:
           bucket: bucket
           force: ${{ github.event.inputs.force }}
-
       - name: Deploy changes
         run: |
           git config --global user.name 'github-actions[bot]'
