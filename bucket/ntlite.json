@@ -1,7 +1,7 @@
 {
     "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/NTLite-Portable.json",
     "depends": "innounp",
-    "version": "1.0.6.3",
+    "version": "2023.9.9419",
     "description": "Local control for updating and editing Windows images and deployments.",
     "homepage": "https://www.ntlite.com",
     "license": {
