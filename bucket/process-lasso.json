@@ -40,7 +40,7 @@
     ],
     "checkver": {
         "url": "https://bitsum.com/changes/processlasso/",
-        "regex": "Process Lasso v.*>([\\d.]+)"
+        "regex": "<strong>v([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://dl.bitsum.com/files/processlassosetup64.exe#/dl.7z"
