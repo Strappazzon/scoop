@@ -2,16 +2,13 @@
     "[powershell]": {
         "editor.formatOnSave": true
     },
-
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
         "source.fixAll.sortJSON": true
     },
-
     "files.exclude": {
         "**/.git": true
     },
-
     "json.schemas": [
         {
             "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
@@ -20,18 +17,15 @@
             ]
         }
     ],
-
     "markdownlint.config": {
         "MD033": false,
         "MD041": false
     },
-
     "powershell.codeFormatting.alignPropertyValuePairs": true,
     "powershell.codeFormatting.ignoreOneLineBlock": true,
     "powershell.codeFormatting.preset": "OTBS",
     "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
-
-    "sortJSON.orderOverride": [
+    "sort-json.settings.orderOverrideKeys": [
         "##",
         "depends",
         "suggest",
@@ -59,6 +53,5 @@
         "autoupdate",
         "notes"
     ],
-
     "terminal.integrated.defaultProfile.windows": "PowerShell"
 }
