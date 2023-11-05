@@ -29,5 +29,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/trumank/drg-mod-integration/releases/download/v$version/drg_mod_integration-x86_64-pc-windows-msvc.zip"
-    }
+    },
+    "notes": "Install drg-mod-integration-notag if you don't want your lobby marked as modded."
 }
