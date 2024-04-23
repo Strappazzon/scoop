@@ -1,7 +1,7 @@
 {
     "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/NTLite-Portable.json",
     "depends": "innounp",
-    "version": "2024.4.9880",
+    "version": "2024.4.9910",
     "description": "Local control for updating and editing Windows images and deployments.",
     "homepage": "https://www.ntlite.com",
     "license": {
@@ -9,7 +9,7 @@
         "url": "https://www.ntlite.com/shop/"
     },
     "url": "https://downloads.ntlite.com/files/NTLite_setup_x64.exe",
-    "hash": "58b69653b950e55194413d0d59fc2e5cae598b1421b5871c975129b68cc115de",
+    "hash": "818cb6618c5c1f79d6c5eb79957dc9113c45238f7d70d794087df450c4456e1e",
     "pre_install": "If (!(Test-Path \"$persist_dir\\settings.xml\")) { New-Item \"$dir\\settings.xml\" -ItemType File | Out-Null }",
     "installer": {
         "script": [
