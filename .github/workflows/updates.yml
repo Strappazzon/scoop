@@ -17,22 +17,26 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@main
+
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: 1
+
   update:
     name: Autoupdate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
+
       - name: Update manifests
         uses: foosel/scoop-checkver-action@main
         with:
           bucket: bucket
           force: ${{ github.event.inputs.force }}
+
       - name: Deploy changes
         run: |
           git config --global user.name 'github-actions[bot]'

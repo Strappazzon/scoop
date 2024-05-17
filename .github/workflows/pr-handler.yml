@@ -6,12 +6,14 @@ on:
       - opened
 
 jobs:
-  pullRequestHandler:
-    name: PullRequestHandler
+  pr_handler:
+    name: Pull Request Handler
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@main
-      - name: PullRequestHandler
+      - name: Checkout repo
+        uses: actions/checkout@main
+
+      - name: Pull Request Handler
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
