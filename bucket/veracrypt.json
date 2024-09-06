@@ -39,7 +39,7 @@
     "pre_install": "If (!(Test-Path \"$persist_dir\\Configuration.xml\")) { New-Item \"$dir\\Configuration.xml\" -ItemType File | Out-Null }",
     "checkver": {
         "url": "https://www.veracrypt.fr/en/Downloads.html",
-        "regex": "Latest Stable Release - ([\\d.]+)"
+        "regex": "Windows: Version ([\\d\\.]+)"
     },
     "autoupdate": {
         "url": "https://launchpad.net/veracrypt/trunk/$version/+download/VeraCrypt%20Portable%20$version.exe#/setup.exe",
