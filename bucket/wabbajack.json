@@ -17,6 +17,7 @@
         ]
     ],
     "persist": [
+        "downloaded_mod_lists",
         "logs",
         "Wabbajack.exe.WebView2"
     ],
