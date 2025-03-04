@@ -25,7 +25,7 @@ jobs:
           path: scoop_core
 
       - name: Init Test Suite
-        uses: potatoqualitee/psmodulecache@v5.1
+        uses: potatoqualitee/psmodulecache@v6.2.1
         with:
           modules-to-cache: BuildHelpers
           shell: powershell
@@ -53,7 +53,7 @@ jobs:
           path: scoop_core
 
       - name: Init Test Suite
-        uses: potatoqualitee/psmodulecache@v5.1
+        uses: potatoqualitee/psmodulecache@v6.2.1
         with:
           modules-to-cache: BuildHelpers
           shell: pwsh
