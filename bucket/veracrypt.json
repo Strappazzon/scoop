@@ -1,14 +1,14 @@
 {
     "##": "Based on https://github.com/soracqt/scoop-bucket/blob/main/bucket/veracrypt-portable.json",
-    "version": "1.26.15",
+    "version": "1.26.20",
     "description": "A free open source disk encryption software for Windows, Mac OSX and Linux based on TrueCrypt.",
     "homepage": "https://veracrypt.fr/",
     "license": {
         "identifier": "Apache-2.0",
         "url": "https://sourceforge.net/p/veracrypt/code/ci/master/tree/License.txt"
     },
-    "url": "https://launchpad.net/veracrypt/trunk/1.26.15/+download/VeraCrypt%20Setup%201.26.15.exe#/setup.exe",
-    "hash": "sha256:BC569A7876587EE139254CCD058493BED1D8A5EFE3CD6B4578A2A4125950AE86",
+    "url": "https://launchpad.net/veracrypt/trunk/1.26.20/+download/VeraCrypt%20Portable%201.26.20.exe#/setup.exe",
+    "hash": "89e86266d2a5814788ef3648ca9fffdc0c37550065cf1e349b62c37cecc89349",
     "architecture": {
         "64bit": {
             "shortcuts": [
