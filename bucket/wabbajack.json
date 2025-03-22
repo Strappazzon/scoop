@@ -1,14 +1,14 @@
 {
     "##": "Based on https://github.com/maokwen/scoop-bucket/blob/master/bucket/wabbajack.json",
-    "version": "4.0.0.2",
+    "version": "4.0.0.3",
     "description": "An automated Modlist installer for various games.",
     "homepage": "https://www.wabbajack.org/",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/wabbajack-tools/wabbajack/blob/main/LICENSE.txt"
     },
-    "url": "https://github.com/wabbajack-tools/wabbajack/releases/download/4.0.0.2/4.0.0.2.zip",
-    "hash": "2a7147356d9b09d9d4491a46cb45d637e32b11020952010fa74126e356ffda5e",
+    "url": "https://github.com/wabbajack-tools/wabbajack/releases/download/4.0.0.3/4.0.0.3.zip",
+    "hash": "50440e9f46b96a905d3f29181f30099e7b1b4a0b70927c319ee5ab2df24df9f6",
     "bin": "cli/wabbajack-cli.exe",
     "shortcuts": [
         [
