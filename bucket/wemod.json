@@ -1,13 +1,13 @@
 {
-    "version": "10.14.0",
+    "version": "10.15.0",
     "description": "Thousands of free mods and trainers for your favorite single-player PC games - all in one place.",
     "homepage": "https://www.wemod.com",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.wemod.com/terms"
     },
-    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-10.14.0.exe#/dl.7z",
-    "hash": "7058212cced2965bc756143ab0b79c2ed7b3de593a56020fcc7d912245805a75",
+    "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-10.15.0.exe#/dl.7z",
+    "hash": "e76f046b5cd9b537ebf73970690ade0301a65aea5c0e3f8ec94f788aa4a6f619",
     "pre_install": [
         "$nupkg=(Get-ChildItem $dir\\*full.nupkg).Name",
         "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction SilentlyContinue -Force -Recurse",
