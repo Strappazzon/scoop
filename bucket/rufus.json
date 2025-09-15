@@ -1,0 +1,28 @@
+{
+    "version": "4.9",
+    "description": "Create bootable USB drives the easy way",
+    "homepage": "https://rufus.ie/en/",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/pbatard/rufus/blob/master/LICENSE.txt"
+    },
+    "url": "https://github.com/pbatard/rufus/releases/download/v4.9/rufus-4.9p.exe",
+    "hash": "sha256:497F796E6D076D4855D697965C04626E6D3624658FCE3ECA82AB14F7414EEDE2",
+    "pre_install": [
+        "Move-Item \"$dir\\rufus-*.exe\" \"$dir\\rufus-p.exe\"",
+        "'UpdateCheckInterval = -1' | Out-File -File \"$dir\\rufus.ini\" -Encoding utf8"
+    ],
+    "shortcuts": [
+        [
+            "rufus-p.exe",
+            "Rufus"
+        ]
+    ],
+    "persist": "rufus.ini",
+    "checkver": {
+        "github": "https://github.com/pbatard/rufus"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pbatard/rufus/releases/download/v$version/rufus-$versionp.exe"
+    }
+}
