@@ -1,6 +1,6 @@
 {
     "##": "Based on https://github.com/jonisb/Misc-scoops/blob/master/bucket/ProcessLasso.json",
-    "version": "17.0.0.132",
+    "version": "17.0.1.18",
     "description": "Real-Time CPU Optimization and Automation.",
     "homepage": "https://bitsum.com/processlasso/",
     "license": {
@@ -8,7 +8,7 @@
         "url": "https://bitsum.com/howfree/"
     },
     "url": "https://dl.bitsum.com/files/processlassosetup64.exe#/dl.7z",
-    "hash": "3c3b619c6e98477252f629f5c0aaf80bf362fc6c43dba16523d89bfcebafdd14",
+    "hash": "03fcd5d1dbca0e60ced304a1c6aaa2973a95a0d0cdb6288093c68d63dec2147d",
     "extract_to": "ProcessLasso",
     "installer": {
         "script": [
