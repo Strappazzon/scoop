@@ -1,13 +1,13 @@
 {
-    "version": "4.12",
+    "version": "4.13",
     "description": "Create bootable USB drives the easy way",
     "homepage": "https://rufus.ie/en/",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/pbatard/rufus/blob/master/LICENSE.txt"
     },
-    "url": "https://github.com/pbatard/rufus/releases/download/v4.12/rufus-4.12p.exe",
-    "hash": "c19e9aea0e944dcd36bcde3d5bebb60772de4afd844c6ae7cb7f5c5ad5742ae0",
+    "url": "https://github.com/pbatard/rufus/releases/download/v4.13/rufus-4.13p.exe",
+    "hash": "a314db019d608e3d9b2eda797ba5bbe4dfc91bcd621decd144a580080eb13b1b",
     "pre_install": [
         "Move-Item \"$dir\\rufus-*.exe\" \"$dir\\rufus-p.exe\"",
         "'UpdateCheckInterval = -1' | Out-File -File \"$dir\\rufus.ini\" -Encoding utf8"
