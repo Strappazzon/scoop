@@ -1,5 +1,3 @@
-name: Updates
-
 on:
   schedule:
     - cron: "0 0 * * *"
@@ -10,14 +8,14 @@ on:
         required: false
         default: ""
 
+name: Updates
+
 jobs:
   excavate:
-    name: Excavator
+    name: Excavate
     runs-on: windows-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@main
-
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
@@ -25,20 +23,17 @@ jobs:
           SKIP_UPDATED: 1
 
   update:
-    name: Autoupdate
+    name: Update
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@main
-
-      - name: Update manifests
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Update
         uses: foosel/scoop-checkver-action@main
         with:
           bucket: bucket
           force: ${{ github.event.inputs.force }}
 
-      - name: Deploy changes
-        run: |
+      - run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
