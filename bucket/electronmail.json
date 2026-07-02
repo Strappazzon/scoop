@@ -1,14 +1,14 @@
 {
     "##": "Based on https://github.com/anderlli0053/DEV-tools/blob/master/bucket/electronmail.json",
-    "version": "5.3.7",
+    "version": "5.3.8",
     "description": "Unofficial ProtonMail Desktop App",
     "homepage": "https://github.com/vladimiry/ElectronMail",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/vladimiry/ElectronMail/blob/master/LICENSE"
     },
-    "url": "https://github.com/vladimiry/ElectronMail/releases/download/v5.3.7/electron-mail-5.3.7-windows-x64-nsis-installer.exe#/dl.7z",
-    "hash": "054f24e52fdbf32ae21f1b38003a02b31474ac72ec712b83b093d42c39f6214d",
+    "url": "https://github.com/vladimiry/ElectronMail/releases/download/v5.3.8/electron-mail-5.3.8-windows-x64-nsis-installer.exe#/dl.7z",
+    "hash": "d7d3b9c56c080d22b40b9d7f9886982758ad375c9366b3c6cb7468bed72051ca",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse"
